@@ -6,7 +6,7 @@ height: 100vh;
 margin: 0;
 background: lightblue;
 font-family: 'Zen Loop';
-background-image: url( https://source.unsplash.com/1600x900/?landscape);
+background-image: url(https://source.unsplash.com/1600x900/?landscape);
 font-size: 120%;
 }
 
@@ -33,7 +33,6 @@ button {
     width: 46px;
     cursor: pointer;
     transition: 0.2 ease-in-out;
-    ]
 }
 
 imput.search-bar {
@@ -48,5 +47,19 @@ imput.search-bar {
 
 h1.temp {
     margin: 0;
+}
 
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after{
+    visibility: visible;
+    content: "Loading...";
+    Color: white;
+    position: absolute;
+    top: 0;
+    left: 20 px;
 }
