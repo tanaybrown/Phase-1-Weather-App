@@ -1,8 +1,8 @@
 let weather = {
-    apiKey: 1bf21a0583f728dbbb696c491436c264
-        fetchWeather: (city), {
+    apiKey: "1bf21a0583f728dbbb696c491436c264"
+        fetchWeather: (city) => {
         fetch(
-            "https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={APIkey}"
+            "https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={APIkey}")
         .then((response) => response.json())
         .then((data) => this.displayWeather(data))
     }
@@ -31,7 +31,6 @@ document.querySelector(".search button").addEventListener("click", function() {
 document.querySelector(".search-bar").addEventListener("keyup", function(event) {
     if (event.key == "Enter") 
     weather.search();
-    }
-})
+    })
 
 weather.fetchWeather("Denver");
