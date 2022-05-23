@@ -1,8 +1,8 @@
 let weather = {
     apiKey: "1bf21a0583f728dbbb696c491436c264"
-        fetchWeather: (city) => {
+        fetch.weather: (city) => {
         fetch(
-            "https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={APIkey}")
+            "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={1bf21a0583f728dbbb696c491436c264}"        
         .then((response) => response.json())
         .then((data) => this.displayWeather(data))
     }
@@ -13,7 +13,7 @@ let weather = {
         const { speed } = data.wind;
 
         document.querySelector(".city").innerText = "Weather in" + name;
-        document.querySelector(".icon").src = "https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={APIkey}";
+        document.querySelector(".icon").src = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={1bf21a0583f728dbbb696c491436c264}";
         document.querySelector(".description").innerText = description;
         document.querySelector(".temp").innerText = temp + "°F";
         document.querySelector(".humidity").innerText = "humidity:" + humidity + "%";
